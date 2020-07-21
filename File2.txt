@@ -1,2 +1,69 @@
 Manisha 
 Welcome to Branch Demo
+Manisha 
+Welcome to Branch Demo
+In Git, cloning is the act of making a copy of any target repository. 
+The target repository can be remote or local. You can clone your repository from the remote repository 
+to create a local copy on your system. Also, you can sync between the two locations.
+$ git clone https://github.com/Manisha-atos/NewRepo.git 
+
+
+=======================Branching =======================
+
+Branch --another line of development.
+default is the Master Branch .
+we can create a duplicate copy of current branch do the new changes and then update the original branch
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (master)
+$ git status
+On branch master
+
+New Develop Branch is created 
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (master)
+$ git branch develop
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (master)
+$ git branch
+  develop
+* master
+to switch to the develop branch for furtherr development 
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (master)
+$ git checkout develop
+Switched to branch 'develop'
+
+Now do changes in the File2.txt
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (develop)
+$ git commit -am "Develop branch commit"  // -am will do add and commit in 1 command
+[develop bc636f7] Develop branch commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (develop)
+$ git status
+On branch develop
+nothing to commit, working tree clean
+
+Dell@Admin MINGW64 /g/ManishaGit/Myprojct (develop)
+$ git log
+commit bc636f7027217fdca3c05e63f9cace76c4f88c60 (HEAD -> develop)
+Author: Manisha Mane <pimplemp@rediffmail.com>
+Date:   Wed May 6 22:49:27 2020 +0530
+
+    Develop branch commit
+
+commit c5bfeea40242312eda3fb98dbcb766e75363ee2c (master)
+Author: Manisha Mane <pimplemp@rediffmail.com>
+Date:   Wed May 6 22:44:24 2020 +0530
+
+    master branch
